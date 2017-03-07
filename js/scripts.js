@@ -1,9 +1,6 @@
-var femaleNames = ['Asia', 'Kasia', 'Ola', 'Jola'];
-var maleNames = ['Piotrek', 'Marek', 'Arek', 'Jarek'];
-var allNames = femaleNames.concat(maleNames);
-var newName ='Marian'
-
-if (allNames.indexOf(newName) === -1) {
-    var x = allNames.push(newName);
-}
-console.log(allNames);
+var text = 'Papugi koszą trawę, unosząc się nad ziemią 15 centymetrów, na czerwonych dywanach.'
+var animal ='Zielone słonie'
+var animalUpperCased = animal.toUpperCase();
+var textAfter = text.replace('Papugi', animalUpperCased);
+var textAfterRedone = textAfter.substr(0,length/2)
+console.log(textAfterRedone)
