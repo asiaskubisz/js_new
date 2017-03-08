@@ -1,9 +1,6 @@
-var femaleNames = ['Asia', 'Kasia', 'Ola', 'Jola'];
-var maleNames = ['Piotrek', 'Marek', 'Arek', 'Jarek'];
-var allNames = femaleNames.concat(maleNames);
-var newName ='Marian'
-
-if (allNames.indexOf(newName) === -1) {
-    var x = allNames.push(newName);
+var buttonNamesByClass = document.getElementsByClassName('button');
+console.log(buttonNamesByClass);
+for (k = 0; k < buttonNamesByClass.length; k++) {
+var tab = document.getElementsByClassName("button")[k].textContent;
 }
-console.log(allNames);
+alert(tab)
