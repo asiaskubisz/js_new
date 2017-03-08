@@ -1,9 +1,13 @@
-var femaleNames = ['Asia', 'Kasia', 'Ola', 'Jola'];
-var maleNames = ['Piotrek', 'Marek', 'Arek', 'Jarek'];
-var allNames = femaleNames.concat(maleNames);
-var newName ='Marian'
+/*jslint browser: true, devel: true, evil: false, plusplus: true, unparam: true, sloppy: true*/
+var buttonElem = document.getElementById('addElem');
 
-if (allNames.indexOf(newName) === -1) {
-    var x = allNames.push(newName);
-}
-console.log(allNames);
+buttonElem.addEventListener('click', function() {
+  var list = document.getElementById('list'), // jak stawiam ',' nie musze dodawac var w nastepnej linijce
+      licznik = document.getElementsByTagName('li').length,
+      element = document.createElement('li');
+  element.innerHTML = 'item ' + licznik;
+  list.appendChild(element);
+            
+
+});
+
