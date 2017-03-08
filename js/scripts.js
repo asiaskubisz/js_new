@@ -1,9 +1,10 @@
-var femaleNames = ['Asia', 'Kasia', 'Ola', 'Jola'];
-var maleNames = ['Piotrek', 'Marek', 'Arek', 'Jarek'];
-var allNames = femaleNames.concat(maleNames);
-var newName ='Marian'
-
-if (allNames.indexOf(newName) === -1) {
-    var x = allNames.push(newName);
-}
-console.log(allNames);
+function rysujChoinke() {
+    for ( i = 0 ; i < 5; i++) {
+        var star = ' ';
+        for ( n = 0 ; n < i*2-1 ; n++) {
+                star += '*';
+        }
+        console.log(star);
+    }
+} 
+rysujChoinke();
