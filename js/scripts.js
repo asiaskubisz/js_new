@@ -113,5 +113,6 @@ function playerPick(playerPick) {
 function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
+    setGamePoints();
 }
-console.log(SetGamePoints)
+
