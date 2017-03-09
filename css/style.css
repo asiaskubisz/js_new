@@ -1,9 +1,43 @@
-var femaleNames = ['Asia', 'Kasia', 'Ola', 'Jola'];
-var maleNames = ['Piotrek', 'Marek', 'Arek', 'Jarek'];
-var allNames = femaleNames.concat(maleNames);
-var newName ='Marian'
-
-if (allNames.indexOf(newName) === -1) {
-    var x = allNames.push(newName);
+* {
+	box-sizing:border-box;
 }
-console.log(allNames);
+
+body {
+	margin: 0 auto;
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 1px;
+	font-size: 14px;
+}
+.container {
+  width: 1200px;
+  margin: auto;
+  max-width: 100%;
+}
+
+/*CLEARFIX*/
+.row:before,
+.row:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.row:after {
+    clear: both;
+}
+
+.container .label {
+    display: block;
+    max-width: 25%;
+    margin-top: 10px;
+    padding: 10px 20px 10px 20px;
+}
+
+.container .btn {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.tony {
+    margin-top: 25px;
+}
