@@ -52,6 +52,8 @@ function newGame() {
 
     playerNameElem.innerHTML = player.name;
     setGamePoints(); 
+      
+  
   }
 
 }
@@ -99,6 +101,14 @@ function checkRoundWinner(playerPick, computerPick) {
         computerResultElem.innerHTML = "Wygrana!";
         computer.score++;
     }
+      if (computer.score == 10) {
+        console.log(The winner is Computer);
+
+        break;
+          
+      if (player.score == 10) {
+        console.log(Congrats! You are the Winner!);
+    }
 
 }
 function playerPick(playerPick) {
@@ -108,11 +118,13 @@ function playerPick(playerPick) {
     computerPickElem.innerHTML = computerPick;
     
     checkRoundWinner(playerPick, computerPick);
+    setGamePoints();
 }
 
 function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
-    setGamePoints();
+    
+    
 }
 
