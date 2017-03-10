@@ -133,4 +133,6 @@ function endGame() {
   } 
 }
 
+endGame();
+
 
