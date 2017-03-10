@@ -132,5 +132,5 @@ function endGame() {
         
   } 
 }
-function endGame()
+
 
