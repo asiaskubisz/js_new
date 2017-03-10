@@ -1,12 +1,12 @@
 /*jslint devel: true, evil: true, plusplus: true, sloppy: true*/
 
 var newGameBtn = document.getElementById('js-newGameButton'), // start new game button
-    pickRock = document.getElementById('js-playerPick_rock'),
-    pickPaper = document.getElementById('js-playerPick_paper'),
+    pickRock = document.getElementById('js-playerPick_rock'), 
+    pickPaper = document.getElementById('js-playerPick_paper'), 
     pickScissors = document.getElementById('js-playerPick_scissors'),
-    newGameElem = document.getElementById('js-newGameElement'),
-    pickElem = document.getElementById('js-playerPickElement'),
-    resultsElem = document.getElementById('js-resultsTableElement');
+    newGameElem = document.getElementById('js-newGameElement'), // start button's container
+    pickElem = document.getElementById('js-playerPickElement'), // paper/scis/rock container
+    resultsElem = document.getElementById('js-resultsTableElement'); // results container
 
 newGameBtn.addEventListener('click', newGame); // start new game button
 pickRock.addEventListener('click', function() { playerPick('rock') });
@@ -29,7 +29,15 @@ function setGameElements() {
         resultsElem.style.display = 'block';
       break;
     case 'ended':
+        var = winnerAlert;  
+        function showWinner(){
+            winnerAlert = setTimeout(alertFunc, 1000);
+        }
+        function alertFunc {
+            alert("Koniec Gry. Wygral" + winnerGameIs);
+        } 
         newGameBtn.innerText = 'Jeszcze raz';
+          
     case 'notStarted':
     default:
         newGameElem.style.display = 'block';
@@ -120,19 +128,21 @@ function setGamePoints() {
     
 }
 
-function endGame() {
-  if (player.name) {
-    player.score = computer.score = 10;
-    gameState = 'ended';
-    setGameElements();
-    
-    alert('Koniec Gry');
-    playerNameElem.innerHTML = player.name + 'winner';
-    setGameElements(); 
-        
-  } 
-}
 
-endGame();
+var gameWinnerIs = '';
+
+function endGame () {
+    if (player.score = 10) {
+        gameWinnerIs = 'player'; 
+        gameState = 'ended';
+}   else if (computer.score = 10) {
+        gameWinnerIs = 'computer';
+        gameState = 'ended';
+}
+}
+setGameElements();
+
+
+
 
 
