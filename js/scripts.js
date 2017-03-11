@@ -121,21 +121,20 @@ function setGamePoints() {
     
     
 }
-
+endGame();
+setGameElements();
 
 var gameWinnerIs = '';
 
 function endGame () {
-    if (player.score == 10) {
+    if (player.score == 5) {
         gameWinnerIs = 'player'; 
         gameState = 'ended';
-}   else if (computer.score == 10) {
+}   else if (computer.score == 5) {
         gameWinnerIs = 'computer';
         gameState = 'ended';
 }
 }
-endGame();
-setGameElements();
 
 
 
