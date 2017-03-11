@@ -29,13 +29,7 @@ function setGameElements() {
         resultsElem.style.display = 'block';
       break;
     case 'ended':
-        var = winnerAlert;  
-        function showWinner(){
-            winnerAlert = setTimeout(alertFunc, 1000);
-        }
-        function alertFunc {
-            alert("Koniec Gry. Wygral" + winnerGameIs);
-        } 
+        setTimeout(function(){alert("Koniec Gry. Wygral" + winnerGameIs);}, 1000); 
         newGameBtn.innerText = 'Jeszcze raz';
           
     case 'notStarted':
