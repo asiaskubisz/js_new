@@ -1,5 +1,5 @@
-$(document).ready(function(){
-	console.log('DOM załadowany - można się bawić');
+$(function(){
+	console.log('ready!');
 });
 
 var span = $("span");
