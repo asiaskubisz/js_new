@@ -132,10 +132,10 @@ function setGamePoints() {
 var gameWinnerIs = '';
 
 function endGame () {
-    if (player.score = 10) {
+    if (player.score == 10) {
         gameWinnerIs = 'player'; 
         gameState = 'ended';
-}   else if (computer.score = 10) {
+}   else if (computer.score == 10) {
         gameWinnerIs = 'computer';
         gameState = 'ended';
 }
