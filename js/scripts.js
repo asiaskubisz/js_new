@@ -134,6 +134,7 @@ function endGame () {
         gameState = 'ended';
 }
 }
+endGame();
 setGameElements();
 
 
