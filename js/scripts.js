@@ -119,10 +119,11 @@ function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
     
+    endGame();
+    setGameElements();
     
 }
-endGame();
-setGameElements();
+
 
 var gameWinnerIs = '';
 
