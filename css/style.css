@@ -19,5 +19,10 @@ body {
 ul {
     width: 2000px;
     list-style-type: none;
+}
+
+li {
+    width: 400px;
     float: left;
+    height: 300px;
 }
