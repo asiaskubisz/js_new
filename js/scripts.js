@@ -28,8 +28,7 @@ function setGameElements() {
         pickElem.style.display = 'block';
         resultsElem.style.display = 'block';
       break;
-    case 'ended':
-        setTimeout(function(){alert("Koniec Gry. Wygral" + winnerGameIs);}, 1000); 
+    case 'ended': 
         newGameBtn.innerText = 'Jeszcze raz';
           
     case 'notStarted':
@@ -130,10 +129,13 @@ var gameWinnerIs = '';
 function endGame () {
     if (player.score == 5) {
         gameWinnerIs = 'player'; 
+        alert("Koniec Gry. Wygral " + player.name);
         gameState = 'ended';
+        
 }   else if (computer.score == 5) {
         gameWinnerIs = 'computer';
         gameState = 'ended';
+        alert("Koniec Gry. Wygral komputer");
 }
 }
 
