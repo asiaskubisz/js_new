@@ -17,6 +17,23 @@ body {
     position: relative;
 }
 
+.slide-img {
+    background-size: cover;
+}
+
+.slide-1 {
+	background-image: url(https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/HH2ZMUI6PO.jpg);
+    background-position: 50% 50%;
+}
+.slide-2 {
+	background-image: url(https://placekitten.com/g/200/200)
+}
+.slide-3 {
+	background-image: url(https://placekitten.com/g/200/200)
+}
+.slide-4 {
+	background-image: url(https://placekitten.com/g/200/200)
+}
 ul {
     width: 2000px;
     list-style-type: none;
