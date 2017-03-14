@@ -14,6 +14,7 @@ body {
     border: 5px;
     border-color: aquamarine;
     overflow: hidden;
+    position: relative;
 }
 
 ul {
@@ -29,13 +30,18 @@ li {
     height: 300px;
 }
 
+#carousel > div {
+    color: azure;
+    font-size: 30px;
+    position: absolute;
+}
+
+.iconLeft {
+    top: 50%;
+    left: 5%;
+}
+
 .iconRight {
     top: 50%;
     right: 5%;
-}
-
-.iconCenter {
-    bottom: 2%;
-    right: 50%;
-    transform: translateX(50%);
 }
