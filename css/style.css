@@ -19,10 +19,23 @@ body {
 ul {
     width: 2000px;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 li {
     width: 400px;
     float: left;
     height: 300px;
+}
+
+.iconRight {
+    top: 50%;
+    right: 5%;
+}
+
+.iconCenter {
+    bottom: 2%;
+    right: 50%;
+    transform: translateX(50%);
 }

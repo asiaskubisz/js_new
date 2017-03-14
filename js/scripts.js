@@ -1,6 +1,8 @@
 $(function(){
     
-	var carouselList = $("#carousel ul");
+	var carouselList = $("#carousel ul"),
+        iconLeft = $("js-left"),
+        iconRight = $("js-Right"); 
 
     function moveFirstSlide() {
         var firstItem = carouselList.find("li:first");
@@ -8,6 +10,22 @@ $(function(){
         lastItem.after(firstItem);
         carouselList.css({marginLeft:0});
 }
+    
+    function moveLastSlide() {
+        var firstItem = carouselList.find("li:first"),
+            lastItem = carouselList.find("li:last");
+
+        firstItem.before(lastItem);
+    }
+    
+     iconLeft.click(function() {
+        moveLastSlide();
+    });
+
+    iconRight.click(function() {
+        moveFirstSlide();
+    });
+    
     function changeSlide() {
         carouselList.animate({'marginLeft':-400}, 500, moveFirstSlide);
 }
