@@ -2,7 +2,7 @@ $(function(){
     
 	var carouselList = $("#carousel ul"),
         iconLeft = $("js-left"),
-        iconRight = $("js-Right"); 
+        iconRight = $("js-right"); 
 
     function moveFirstSlide() {
         var firstItem = carouselList.find("li:first");
