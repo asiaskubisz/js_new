@@ -27,7 +27,7 @@ $(function(){
     });
     
     function changeSlide() {
-        carouselList.animate({'marginLeft':-400}, 500, moveFirstSlide);
+        carouselList.animate({'marginLeft':-700}, 500, moveFirstSlide);
 }
     
     setInterval(changeSlide, 3000);
