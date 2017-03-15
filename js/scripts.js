@@ -1,39 +1,8 @@
-$(function(){
-    
-	var carouselList = $("#carousel ul"),
-        iconLeft = $("js-left"),
-        iconRight = $("js-right"); 
-
-    function moveFirstSlide() {
-        var firstItem = carouselList.find("li:first");
-        var lastItem = carouselList.find("li:last");  
-        lastItem.after(firstItem);
-        carouselList.css({marginLeft:0});
+function Telefon(marka, cena, kolor) {
+    this.marka = marka;
+        this.cena = cena;
+        this.kolor = kolor;
 }
-    
-    function moveLastSlide() {
-        var firstItem = carouselList.find("li:first"),
-            lastItem = carouselList.find("li:last");
 
-        firstItem.before(lastItem);
-    }
-    
-     iconLeft.click(function() {
-        moveLastSlide();
-    });
-
-    iconRight.click(function() {
-        moveFirstSlide();
-    });
-    
-    function changeSlide() {
-        carouselList.animate({'marginLeft':-400}, 500, moveFirstSlide);
-}
-    
-    setInterval(changeSlide, 3000);
-
-  
-
-
-});
-
+Telefon.prototype.printInfo = function() {
+	console.log("Marka telefonu to " + this.marka +", kolor to " + this.kolor +", a cena to " + this.cena +".");
