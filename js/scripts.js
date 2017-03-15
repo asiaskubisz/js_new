@@ -11,6 +11,6 @@ var iPhone7 = new Telefon("Apple", 2250, "srebrny");
 var SamsungGalaxyS6 = new Telefon("Samsung", 1300, "czarny");
 var OnePlusOne = new Telefon("ChineseMaker", 400, "zielony");
     
-iPhone6S.printInfo();
+iPhone7.printInfo();
 SamsungGalaxyS6.printInfo();
 OnePlusOne.printInfo();
