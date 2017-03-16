@@ -2,7 +2,7 @@ $(document).ready(function(){
     var slider = $(".slider");
     var slides = slider.find("ul.slides");
 
-    var sliderWidth = 1600;
+    var sliderWidth = document.body.clientWidth;
     var sliderHeight = 800;
     var intervalTimeSec = 4;
 
