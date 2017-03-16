@@ -1,6 +1,6 @@
-$(function(){
+$(document).ready(function(){
     function Button(text) {
-        this.text = "text" || 'Hello';
+        this.text = text || 'Hello';
     }
     Button.prototype = {
         create: function() {
@@ -10,13 +10,13 @@ $(function(){
 	    this.$element.click(function() {
 		  alert(self.text);
 	      });
-        $('body').append(this.$element);
+        this.$element.appendTo($('body'));
         }
     }
 
-    var btn1 = new Button('Hello!');
+    var btn1 = new Button();
     btn1.create();
-}
+});
   
 
 
