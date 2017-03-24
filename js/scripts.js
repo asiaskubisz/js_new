@@ -51,6 +51,7 @@ $(function() {
             // Dodawanie karteczki po kliknięciu w przycisk:
             $columnAddCard.click(function() {
                 self.addCard(new Card(prompt("Wpisz nazwę karty")));
+            });
 
                 // KONSTRUOWANIE ELEMENTU KOLUMNY    
                 $column.append($columnTitle)
@@ -60,7 +61,6 @@ $(function() {
 
                 // ZWRACANIE STWORZONEJ  KOLUMNY    
                 return $column;
-            });
 
         }
     }
