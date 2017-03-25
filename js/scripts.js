@@ -1,24 +1,5 @@
 $(function() {
 
-    /*var table = {
-    name: 'projekt',
-    element: <jQuery element> // np. $('div')
-    };
-  
-    var column = {
-    id: 12j82da20k,
-    name: 'todo',
-    element: <jQuery element> // np. $('div')
-    };
-  
-    var card = {
-    id: '2kd8s958ka',
-    description: 'Create Kanban app',
-    color: 'green',
-    element: <jQuery element>
-    };
-    */
-
     function randomString() {
         var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ';
         var str = '';
@@ -30,7 +11,7 @@ $(function() {
 
 
     function Column(name) {
-        var self = this; // przyda się dla funkcji zagnieżdżonych
+        var self = this; 
 
         this.id = randomString();
         this.name = name;

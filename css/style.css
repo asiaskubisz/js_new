@@ -5,3 +5,11 @@
 .column-card-list {
     min-height: 30px;
 }
+
+h1 {
+    text-align: center;
+}
+
+.column {
+    display: inline-block;
+}
