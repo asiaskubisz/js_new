@@ -13,3 +13,7 @@ h1 {
 .column {
     display: inline-block;
 }
+
+.ui-sortable {
+  min-height: 80px;
+}
