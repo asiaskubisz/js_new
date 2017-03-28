@@ -1,22 +1,47 @@
 // KLASA KANBAN CARD
-function Card(description) {
+function Card(id, name) {
 	var self = this;
 	
-	this.id = randomString();
-	this.description = description;
-	this.element = createCard();
+
+	this.id = id;
+	this.name = name || 'Nie podano nazwy';
 
 	function createCard() {
 		var card = $('<li class="card"></li>');
 		var cardDeleteBtn = $('<button class="btn-delete">x</button>');
 		var cardDescription = $('<p class="card-description"></p>');
 		
+    DELETE /card/{id}
+------------------------------
+Request:
+{id}: int - id karteczki, którą chcemy usunąć
+------------------------------
+Response:
+{
+   id: int
+}
+        
+        removeCard: function() {
+    var self = this;
+    $.ajax({
+      url: baseUrl + '/card/' + self.id,
+      method: 'DELETE',
+      success: function(){
+        self.element.remove();
+      }
+    });
+}
+
+}
+        
+/* OLD CODE
+
 		cardDeleteBtn.click(function(){
 			self.removeCard();
 		});
 		
 		card.append(cardDeleteBtn);
-		cardDescription.text(self.description);
+		cardDescription.text(self.name);
 		card.append(cardDescription)
 		return card;
 	}
@@ -26,3 +51,4 @@ Card.prototype = {
 	  this.element.remove();
 	}
 }
+*/

@@ -1,10 +1,79 @@
-function Column(name) {
-	var self = this;
-	
-	this.id = randomString();
-	this.name = name;
-	this.element = createColumn();
+function Column(id, name) {
+    this.id = id;
+	this.name = name || 'Nie podano nazwy'
+    
+    
+    DELETE /column/{id}
+------------------------------
+Request:
+{id}: int - id kolumny, którą chcemy usunąć
+------------------------------
+Response:
+{
+   id: int
+}
+    
+    
+    deleteColumn: function() {
+    var self = this;
+    $.ajax({
+      url: baseUrl + '/column/' + self.id,
+      method: 'DELETE',
+      success: function(response){
+        self.element.remove();
+      }
+    });
+ }
+    
+    columnAddCard.click(function(event) {
+	var cardName = prompt("Wpisz nazwę karty");
+	event.preventDefault();
+	self.createCard(new Card(cardName));
+});
+    
+    POST /card
+------------------------------
+Request:
+name: string - nazwa karteczki, którą tworzymy
+bootcamp_kanban_column_id: int - id kolumny, do której ma należeć stworzona karteczka
+------------------------------
+Response:
+{
+   id: int
+}
+    columnAddCard.click(function(event) {
+	var cardName = prompt("Wpisz nazwę karty");
+	event.preventDefault();
+	$.ajax({
+        url: baseUrl + '/card',
+        method: 'POST',
+        data: {
+              //ciało zapytania
+        },
+        success: function() {
+            //tworzenie nowej karty po stronie klienta
+        }
+    });
+});
+    $.ajax({
+    url: baseUrl + '/card',
+    method: 'POST',
+    data: {
+    name: cardName,
+    bootcamp_kanban_column_id: self.id
+    },
+    success: function(response) {
+        var card = new Card(response.id, cardName);
+        self.createCard(card);
+    }
+});
+    
+}
 
+
+    
+/* OLD CODE   
+    
 	function createColumn() {
 		// TWORZENIE NOWYCH WĘZŁÓW
 		var column = $('<div class="column"></div>');
@@ -39,3 +108,5 @@ Column.prototype = {
 	  this.element.remove();
 	}
 };
+
+*/
