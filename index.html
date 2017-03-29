@@ -1,14 +1,22 @@
 <!-- plik index.html -->
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title> Tytuł strony </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-
-    <script type="text/javascript" src="js/scripts.js"></script>
-  </body>
+   <head>
+      <meta charset="utf-8">
+      <title> Tytuł strony </title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+   </head>
+   <body>
+      <h1>Wyszukiwarka krajów</h1>
+      <button id="search">Szukaj kraju</button>
+      <input id="country-name" type="text" />
+      <h2>Lista krajów</h2>
+      <ul id="countries">
+         <li>Brak danych</li>
+      </ul>
+      <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="js/scripts.js"></script>
+   </body>
 </html>
