@@ -10,10 +10,8 @@ h1 {
     text-align: center;
 }
 
-.column {
-    display: inline-block;
-}
 
-.ui-sortable {
-  min-height: 80px;
+
+.card-list {
+ min-height: 80px;   
 }
