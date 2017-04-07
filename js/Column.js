@@ -1,20 +1,41 @@
 function Column(id, name) {
     this.id = id;
 	this.name = name || 'Nie podano nazwy'
+    this.element = createColumn();        
     
-    
-    DELETE /column/{id}
-------------------------------
-Request:
-{id}: int - id kolumny, którą chcemy usunąć
-------------------------------
-Response:
-{
-   id: int
+	function createColumn() {
+		// TWORZENIE NOWYCH WĘZŁÓW
+		var column = $('<div class="column"></div>');
+		var columnTitle = $('<h2 class="column-title">' + self.name + '</h2>');
+		var columnCardList = $('<ul class="card-list"></ul>');
+		var columnDelete = $('<button class="btn-delete">x</button>');
+		var columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');
+		
+		// PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
+		columnDelete.click(function() {
+			self.deleteColumn();
+		});
+		
+		columnAddCard.click(function(event) {
+			event.preventDefault();
+			self.createCard(new Card(prompt("Wpisz nazwę karty")));
+		});
+			
+			// KONSTRUOWANIE ELEMENTU KOLUMNY
+		column.append(columnTitle)
+			.append(columnDelete)
+			.append(columnAddCard)
+			.append(columnCardList);
+			return column;
+		}
 }
-    
-    
-    deleteColumn: function() {
+
+Column.prototype = {
+	createCard: function(card) {
+	  this.element.children('ul').append(card.element);
+	},
+        
+        deleteColumn: function() {
     var self = this;
     $.ajax({
       url: baseUrl + '/column/' + self.id,
@@ -24,23 +45,20 @@ Response:
       }
     });
  }
+	}
+};
+
+
     
+    
+ /*   
     columnAddCard.click(function(event) {
 	var cardName = prompt("Wpisz nazwę karty");
 	event.preventDefault();
 	self.createCard(new Card(cardName));
 });
     
-    POST /card
-------------------------------
-Request:
-name: string - nazwa karteczki, którą tworzymy
-bootcamp_kanban_column_id: int - id kolumny, do której ma należeć stworzona karteczka
-------------------------------
-Response:
-{
-   id: int
-}
+
     columnAddCard.click(function(event) {
 	var cardName = prompt("Wpisz nazwę karty");
 	event.preventDefault();
@@ -68,45 +86,8 @@ Response:
     }
 });
     
-}
+    */
 
 
     
-/* OLD CODE   
-    
-	function createColumn() {
-		// TWORZENIE NOWYCH WĘZŁÓW
-		var column = $('<div class="column"></div>');
-		var columnTitle = $('<h2 class="column-title">' + self.name + '</h2>');
-		var columnCardList = $('<ul class="card-list"></ul>');
-		var columnDelete = $('<button class="btn-delete">x</button>');
-		var columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');
-		
-		// PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
-		columnDelete.click(function() {
-			self.deleteColumn();
-		});
-		
-		columnAddCard.click(function(event) {
-			event.preventDefault();
-			self.createCard(new Card(prompt("Wpisz nazwę karty")));
-		});
-			
-			// KONSTRUOWANIE ELEMENTU KOLUMNY
-		column.append(columnTitle)
-			.append(columnDelete)
-			.append(columnAddCard)
-			.append(columnCardList);
-			return column;
-		}
-	}
-Column.prototype = {
-	createCard: function(card) {
-	  this.element.children('ul').append(card.element);
-	},
-	deleteColumn: function() {
-	  this.element.remove();
-	}
-};
 
-*/

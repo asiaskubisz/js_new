@@ -11,15 +11,7 @@ function Card(id, name) {
 		var cardDeleteBtn = $('<button class="btn-delete">x</button>');
 		var cardDescription = $('<p class="card-description"></p>');
 		
-    DELETE /card/{id}
-------------------------------
-Request:
-{id}: int - id karteczki, którą chcemy usunąć
-------------------------------
-Response:
-{
-   id: int
-}
+
         
         removeCard: function() {
     var self = this;
