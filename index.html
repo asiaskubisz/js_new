@@ -1,14 +1,147 @@
-<!-- plik index.html -->
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title> Tytuł strony </title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <h1>
-      Funkcje Task 6 javascript
-    </h1>
-    <script type="text/javascript" src="js/scripts.js"></script>
-  </body>
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+    	<title>Joanna Skubisz | Kodilla Module 3.3</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+	</head>
+	<body>
+	
+	<!-- NAVIGATION -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+  			<div class="container-fluid">
+    		<!-- Brand and toggle get grouped for better mobile display -->
+    			<div class="navbar-header">
+      				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        				<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+    					<span class="icon-bar"></span>
+      				</button>
+      				<a class="navbar-brand" href="#">Asia Fondue</a>
+    			</div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      				<ul class="nav navbar-nav">
+        				<li class="active"><a href="#">About Me <span class="sr-only">(current)</span></a></li>
+        				<li><a href="#">FAQ</a></li>
+    					<li class="dropdown">
+        					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Activities <span class="caret"></span></a>
+          					<ul class="dropdown-menu">
+            					<li><a href="#">Coding</a></li>
+        						<li><a href="#">Travelling</a></li>
+            					<li><a href="#">Studying</a></li>
+            					<li role="separator" class="divider"></li>
+            					<li><a href="#">Poetry</a></li>
+            					<li role="separator" class="divider"></li>
+            					<li><a href="#">Art</a></li>
+          					</ul>
+        				</li>
+      				</ul>
+    			 <form class="navbar-form navbar-right">    
+        			<div class="form-group">
+          				<input type="text" class="form-control" placeholder="Search">
+        			</div>
+    				<button type="submit" class="btn btn-default">Go</button>
+      			</form>
+    		</div><!-- /.navbar-collapse -->
+  		</div><!-- /.container-fluid -->
+	</nav>
+	
+	<!-- CAROUSEL -->
+	
+		<section class="carousela">
+			<div class="container">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+    					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    					<li data-target="#myCarousel" data-slide-to="1"></li>
+    					<li data-target="#myCarousel" data-slide-to="2"></li>
+						 <li data-target="#myCarousel" data-slide-to="3"></li>
+						 <li data-target="#myCarousel" data-slide-to="4"></li>
+						 <li data-target="#myCarousel" data-slide-to="5"></li>
+					</ol>
+						<div class="carousel-inner" role="listbox">
+  							<div class="item active example-1">
+  							</div>
+  							<div class="item example-2">        
+  							</div>    
+  							<div class="item example-3">        
+  							</div>
+  							<div class="item example-4">        
+							 </div>
+							 <div class="item example-5">        
+					    	 </div>
+						    <div class="item example-6">        
+							</div>
+						</div>
+							<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+</a>
+
+			</div>
+		</section>
+		
+	<!-- TABY -->
+		<section class="taby">
+			<div class="container">
+				<ul class="nav nav-tabs">
+  					<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+  					<li><a data-toggle="tab" href="#menu1">Studies</a></li>
+  					<li><a data-toggle="tab" href="#menu2">Work Experience</a></li>
+				</ul>
+
+				<div class="tab-content">
+  					<div id="home" class="tab-pane fade in active">
+						 <h3>Lorem Ipsum</h3>
+    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras feugiat sit amet nisi eget dapibus. Pellentesque rutrum faucibus lorem eu scelerisque. Phasellus dignissim nibh a ex feugiat, in aliquam dolor gravida. Fusce at elementum massa, vel euismod sem. Aenean posuere ultricies urna quis ultricies. Quisque pretium consequat ultrices. Suspendisse at neque dignissim arcu vulputate ultricies id eu purus. Praesent maximus nisi vel maximus scelerisque. Mauris sed tortor non risus suscipit aliquet at at nunc. Ut commodo pellentesque eros ut bibendum.</p>
+  					</div>
+  					<div id="menu1" class="tab-pane fade">
+    					<h3>Lorem Ipsum Nova</h3>
+    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras feugiat sit amet nisi eget dapibus. Pellentesque rutrum faucibus lorem eu scelerisque. Phasellus dignissim nibh a ex feugiat, in aliquam dolor gravida. Fusce at elementum massa, vel euismod sem. Aenean posuere ultricies urna quis ultricies. Quisque pretium consequat ultrices. Suspendisse at neque dignissim arcu vulputate ultricies id eu purus. Praesent maximus nisi vel maximus scelerisque. Mauris sed tortor non risus suscipit aliquet at at nunc. Ut commodo pellentesque eros ut bibendum.</p>
+  					</div>
+  					<div id="menu2" class="tab-pane fade">
+    				<h3>Lorem Ipsum Extra</h3>
+    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras feugiat sit amet nisi eget dapibus. Pellentesque rutrum faucibus lorem eu scelerisque. Phasellus dignissim nibh a ex feugiat, in aliquam dolor gravida. Fusce at elementum massa, vel euismod sem. Aenean posuere ultricies urna quis ultricies. Quisque pretium consequat ultrices. Suspendisse at neque dignissim arcu vulputate ultricies id eu purus. Praesent maximus nisi vel maximus scelerisque. Mauris sed tortor non risus suscipit aliquet at at nunc. Ut commodo pellentesque eros ut bibendum.</p>
+  					</div>
+				</div>
+			</div>
+		</section>	
+		
+	<!--MODAL-->
+		<section class="modalsekcja">
+			<div class="container">
+				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#tutajtakieid">About This Page
+				</button>
+				<div id="tutajtakieid" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+							<h4>Nic ciekawego</h4>
+							</div>
+							<div class="modal-body">
+							<p>Napisałam tą stronkę w piątek 3 lutego roku pańskiego 2017 na potrzeby własnego rozwoju w zakresie programowania we front-endzie z wykorzystaniem Bootstrappa.</p>
+							</div>
+							<div class="modal-footer">
+							<p>Tak to w skrócie wygląda</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+			
+	<!-- Java Script Plug -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</body>
 </html>

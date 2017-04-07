@@ -1,9 +1,53 @@
-var femaleNames = ['Asia', 'Kasia', 'Ola', 'Jola'];
-var maleNames = ['Piotrek', 'Marek', 'Arek', 'Jarek'];
-var allNames = femaleNames.concat(maleNames);
-var newName ='Marian'
 
-if (allNames.indexOf(newName) === -1) {
-    var x = allNames.push(newName);
+body {
+	padding-top: 50px;
 }
-console.log(allNames);
+
+/* CAROUSEL */
+
+[class*="example"]{
+  min-height:500px;
+  background-size: cover !important;
+  overflow: hidden;
+}
+
+.carousela > .container {
+	padding: 0
+}
+
+.example-1 {
+	background: url(https://images.unsplash.com/photo-1484244233201-29892afe6a2c?dpr=1&auto=format&fit=crop&w=767&h=512&q=80&cs=tinysrgb&crop=);
+}
+.example-2 {
+	background: url(https://images.unsplash.com/photo-1485609315582-cfffa02888e8?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=);
+}
+.example-3 {
+	background: url(https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=);
+}
+.example-4 {
+	background: url(https://images.unsplash.com/photo-1450740199001-78e928502994?dpr=2&auto=compress,format&fit=crop&w=1199&h=794&q=80&cs=tinysrgb&crop=);
+}
+.example-5 {
+	background: url(https://images.unsplash.com/photo-1474496517593-015d8b59450d?dpr=2&auto=compress,format&fit=crop&w=1199&h=800&q=80&cs=tinysrgb&crop=);
+}
+.example-6 {
+	background: url(https://images.unsplash.com/photo-1484851050019-ca9daf7736fb?dpr=2&auto=compress,format&fit=crop&w=1199&h=800&q=80&cs=tinysrgb&crop=);
+}
+
+.carousela > .container {
+	margin-bottom: 50px;
+}
+
+/* TABY */
+.taby > .container {
+	margin-bottom: 50px;
+}
+
+/*MODAL */
+.modalsekcja > .container {
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
